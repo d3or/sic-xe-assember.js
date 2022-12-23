@@ -1,0 +1,30 @@
+{
+  "name": "jsicvm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": "./index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "build": "pkg ."
+  },
+  "pkg": {
+    "bin": "index.js",
+    "assets": [
+      "node_modules/**/*",
+      "index.js",
+      "package.json"
+    ],
+    "scripts": [
+      "index.js"
+    ],
+    "targets": [
+      "node16-linux-x64",
+      "node16-macos-x64",
+      "node16-win-x64"
+    ]
+  },
+  "dependencies": {
+    "pkg": "^5.8.0"
+  }
+}
